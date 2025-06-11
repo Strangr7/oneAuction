@@ -1,0 +1,180 @@
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T00:43:59.793Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T01:34:23.827Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T01:34:29.501Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T01:34:34.100Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T01:34:37.891Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T01:34:48.998Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T01:34:51.261Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T01:35:05.342Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T01:35:07.245Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T01:36:41.983Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T01:47:01.585Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T01:47:22.251Z"}
+{"level":"info","message":"Server is running on port 7001","timestamp":"2025-06-11T02:34:55.093Z"}
+{"level":"info","message":"Server is running on port 7001","timestamp":"2025-06-11T02:37:31.743Z"}
+{"level":"info","message":"Server is running on port 7001","timestamp":"2025-06-11T02:46:38.718Z"}
+{"level":"info","message":"Server is running on port 7001","timestamp":"2025-06-11T02:47:00.979Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:34:13.525Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:34:22.230Z"}
+{"code":8000,"codeName":"AtlasError","connectionGeneration":0,"errorLabelSet":{},"errorResponse":{"code":8000,"codeName":"AtlasError","errmsg":"bad auth : authentication failed","ok":0},"level":"warn","message":"MOngoDB connection erroe bad auth : authentication failed","ok":0,"stack":"MongoServerError: bad auth : authentication failed\n    at Connection.sendCommand (C:\\FSDM\\WIL\\WIL_Project\\backend\\node_modules\\mongodb\\lib\\cmap\\connection.js:299:27)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Connection.command (C:\\FSDM\\WIL\\WIL_Project\\backend\\node_modules\\mongodb\\lib\\cmap\\connection.js:327:26)\n    at async continueScramConversation (C:\\FSDM\\WIL\\WIL_Project\\backend\\node_modules\\mongodb\\lib\\cmap\\auth\\scram.js:131:15)\n    at async executeScram (C:\\FSDM\\WIL\\WIL_Project\\backend\\node_modules\\mongodb\\lib\\cmap\\auth\\scram.js:80:5)\n    at async ScramSHA1.auth (C:\\FSDM\\WIL\\WIL_Project\\backend\\node_modules\\mongodb\\lib\\cmap\\auth\\scram.js:39:16)\n    at async performInitialHandshake (C:\\FSDM\\WIL\\WIL_Project\\backend\\node_modules\\mongodb\\lib\\cmap\\connect.js:104:13)\n    at async connect (C:\\FSDM\\WIL\\WIL_Project\\backend\\node_modules\\mongodb\\lib\\cmap\\connect.js:24:9)","timestamp":"2025-06-11T04:34:23.041Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:34:37.233Z"}
+{"code":8000,"codeName":"AtlasError","connectionGeneration":0,"errorLabelSet":{},"errorResponse":{"code":8000,"codeName":"AtlasError","errmsg":"bad auth : authentication failed","ok":0},"level":"warn","message":"MOngoDB connection erroe bad auth : authentication failed","ok":0,"stack":"MongoServerError: bad auth : authentication failed\n    at Connection.sendCommand (C:\\FSDM\\WIL\\WIL_Project\\backend\\node_modules\\mongodb\\lib\\cmap\\connection.js:299:27)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Connection.command (C:\\FSDM\\WIL\\WIL_Project\\backend\\node_modules\\mongodb\\lib\\cmap\\connection.js:327:26)\n    at async continueScramConversation (C:\\FSDM\\WIL\\WIL_Project\\backend\\node_modules\\mongodb\\lib\\cmap\\auth\\scram.js:131:15)\n    at async executeScram (C:\\FSDM\\WIL\\WIL_Project\\backend\\node_modules\\mongodb\\lib\\cmap\\auth\\scram.js:80:5)\n    at async ScramSHA1.auth (C:\\FSDM\\WIL\\WIL_Project\\backend\\node_modules\\mongodb\\lib\\cmap\\auth\\scram.js:39:16)\n    at async performInitialHandshake (C:\\FSDM\\WIL\\WIL_Project\\backend\\node_modules\\mongodb\\lib\\cmap\\connect.js:104:13)\n    at async connect (C:\\FSDM\\WIL\\WIL_Project\\backend\\node_modules\\mongodb\\lib\\cmap\\connect.js:24:9)","timestamp":"2025-06-11T04:34:37.960Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:35:21.985Z"}
+{"code":8000,"codeName":"AtlasError","connectionGeneration":0,"errorLabelSet":{},"errorResponse":{"code":8000,"codeName":"AtlasError","errmsg":"bad auth : authentication failed","ok":0},"level":"warn","message":"MOngoDB connection erroe bad auth : authentication failed","ok":0,"stack":"MongoServerError: bad auth : authentication failed\n    at Connection.sendCommand (C:\\FSDM\\WIL\\WIL_Project\\backend\\node_modules\\mongodb\\lib\\cmap\\connection.js:299:27)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Connection.command (C:\\FSDM\\WIL\\WIL_Project\\backend\\node_modules\\mongodb\\lib\\cmap\\connection.js:327:26)\n    at async continueScramConversation (C:\\FSDM\\WIL\\WIL_Project\\backend\\node_modules\\mongodb\\lib\\cmap\\auth\\scram.js:131:15)\n    at async executeScram (C:\\FSDM\\WIL\\WIL_Project\\backend\\node_modules\\mongodb\\lib\\cmap\\auth\\scram.js:80:5)\n    at async ScramSHA1.auth (C:\\FSDM\\WIL\\WIL_Project\\backend\\node_modules\\mongodb\\lib\\cmap\\auth\\scram.js:39:16)\n    at async performInitialHandshake (C:\\FSDM\\WIL\\WIL_Project\\backend\\node_modules\\mongodb\\lib\\cmap\\connect.js:104:13)\n    at async connect (C:\\FSDM\\WIL\\WIL_Project\\backend\\node_modules\\mongodb\\lib\\cmap\\connect.js:24:9)","timestamp":"2025-06-11T04:35:22.772Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:37:22.787Z"}
+{"level":"info","message":"\n mongo db connected !! db host: ac-tnjvo6u-shard-00-00.hmnszdi.mongodb.net","timestamp":"2025-06-11T04:37:23.691Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:37:23.694Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:39:04.916Z"}
+{"level":"info","message":"\n mongo db connected !! db host: ac-tnjvo6u-shard-00-00.hmnszdi.mongodb.net","timestamp":"2025-06-11T04:39:05.785Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:39:05.787Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:39:07.290Z"}
+{"level":"info","message":"\n mongo db connected !! db host: ac-tnjvo6u-shard-00-00.hmnszdi.mongodb.net","timestamp":"2025-06-11T04:39:08.098Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:39:08.100Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:39:11.004Z"}
+{"level":"info","message":"\n mongo db connected !! db host: ac-tnjvo6u-shard-00-00.hmnszdi.mongodb.net","timestamp":"2025-06-11T04:39:11.846Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:39:11.847Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:39:13.899Z"}
+{"level":"info","message":"\n mongo db connected !! db host: ac-tnjvo6u-shard-00-00.hmnszdi.mongodb.net","timestamp":"2025-06-11T04:39:14.703Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:39:14.703Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:39:24.577Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:39:25.284Z"}
+{"level":"info","message":"\n mongo db connected !! db host: ac-tnjvo6u-shard-00-00.hmnszdi.mongodb.net","timestamp":"2025-06-11T04:39:26.102Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:39:26.103Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:39:33.344Z"}
+{"level":"info","message":"\n mongo db connected !! db host: ac-tnjvo6u-shard-00-00.hmnszdi.mongodb.net","timestamp":"2025-06-11T04:39:34.134Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:39:34.135Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:39:36.331Z"}
+{"level":"info","message":"\n mongo db connected !! db host: ac-tnjvo6u-shard-00-00.hmnszdi.mongodb.net","timestamp":"2025-06-11T04:39:37.154Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:39:37.156Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:39:40.649Z"}
+{"level":"info","message":"\n mongo db connected !! db host: ac-tnjvo6u-shard-00-00.hmnszdi.mongodb.net","timestamp":"2025-06-11T04:39:41.424Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:39:41.427Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:39:44.425Z"}
+{"level":"info","message":"\n mongo db connected !! db host: ac-tnjvo6u-shard-00-00.hmnszdi.mongodb.net","timestamp":"2025-06-11T04:39:46.195Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:39:46.196Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:39:49.657Z"}
+{"level":"info","message":"\n mongo db connected !! db host: ac-tnjvo6u-shard-00-00.hmnszdi.mongodb.net","timestamp":"2025-06-11T04:39:50.717Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:39:50.721Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:39:51.780Z"}
+{"level":"info","message":"\n mongo db connected !! db host: ac-tnjvo6u-shard-00-00.hmnszdi.mongodb.net","timestamp":"2025-06-11T04:39:52.592Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:39:52.594Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:39:54.016Z"}
+{"level":"info","message":"\n mongo db connected !! db host: ac-tnjvo6u-shard-00-00.hmnszdi.mongodb.net","timestamp":"2025-06-11T04:39:54.821Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:39:54.823Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:39:56.687Z"}
+{"level":"info","message":"\n mongo db connected !! db host: ac-tnjvo6u-shard-00-00.hmnszdi.mongodb.net","timestamp":"2025-06-11T04:39:57.491Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:39:57.492Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:39:59.748Z"}
+{"level":"info","message":"\n mongo db connected !! db host: ac-tnjvo6u-shard-00-00.hmnszdi.mongodb.net","timestamp":"2025-06-11T04:40:00.558Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:40:00.560Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:41:04.595Z"}
+{"level":"info","message":"\n mongo db connected !! db host: ac-tnjvo6u-shard-00-00.hmnszdi.mongodb.net","timestamp":"2025-06-11T04:41:05.415Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:41:05.417Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:41:08.783Z"}
+{"level":"info","message":"\n mongo db connected !! db host: ac-tnjvo6u-shard-00-00.hmnszdi.mongodb.net","timestamp":"2025-06-11T04:41:09.632Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:41:09.633Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:41:12.545Z"}
+{"level":"info","message":"\n mongo db connected !! db host: ac-tnjvo6u-shard-00-00.hmnszdi.mongodb.net","timestamp":"2025-06-11T04:41:13.406Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:41:13.408Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:41:18.350Z"}
+{"level":"info","message":"\n mongo db connected !! db host: ac-tnjvo6u-shard-00-00.hmnszdi.mongodb.net","timestamp":"2025-06-11T04:41:19.129Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:41:19.131Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:41:24.257Z"}
+{"level":"info","message":"\n mongo db connected !! db host: ac-tnjvo6u-shard-00-00.hmnszdi.mongodb.net","timestamp":"2025-06-11T04:41:30.077Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:41:30.079Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:41:31.634Z"}
+{"level":"info","message":"\n mongo db connected !! db host: ac-tnjvo6u-shard-00-00.hmnszdi.mongodb.net","timestamp":"2025-06-11T04:41:32.426Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:41:32.428Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:41:36.881Z"}
+{"level":"info","message":"\n mongo db connected !! db host: ac-tnjvo6u-shard-00-00.hmnszdi.mongodb.net","timestamp":"2025-06-11T04:41:37.632Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:41:37.633Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:49:54.516Z"}
+{"level":"info","message":"\n mongo db connected !! db host: ac-tnjvo6u-shard-00-00.hmnszdi.mongodb.net","timestamp":"2025-06-11T04:49:55.400Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:49:55.403Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:50:11.253Z"}
+{"level":"info","message":"\n mongo db connected !! db host: ac-tnjvo6u-shard-00-00.hmnszdi.mongodb.net","timestamp":"2025-06-11T04:50:12.091Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:50:12.093Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:50:13.054Z"}
+{"level":"info","message":"\n mongo db connected !! db host: ac-tnjvo6u-shard-00-00.hmnszdi.mongodb.net","timestamp":"2025-06-11T04:50:13.889Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:50:13.891Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:50:17.097Z"}
+{"level":"info","message":"\n mongo db connected !! db host: ac-tnjvo6u-shard-00-00.hmnszdi.mongodb.net","timestamp":"2025-06-11T04:50:17.893Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:50:17.896Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:50:19.237Z"}
+{"level":"info","message":"\n mongo db connected !! db host: ac-tnjvo6u-shard-00-00.hmnszdi.mongodb.net","timestamp":"2025-06-11T04:50:20.031Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:50:20.032Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:50:31.202Z"}
+{"level":"info","message":"\n mongo db connected !! db host: ac-tnjvo6u-shard-00-00.hmnszdi.mongodb.net","timestamp":"2025-06-11T04:50:32.016Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:50:32.017Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:50:38.752Z"}
+{"level":"info","message":"\n mongo db connected !! db host: ac-tnjvo6u-shard-00-00.hmnszdi.mongodb.net","timestamp":"2025-06-11T04:50:39.545Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:50:40.095Z"}
+{"level":"info","message":"\n mongo db connected !! db host: ac-tnjvo6u-shard-00-00.hmnszdi.mongodb.net","timestamp":"2025-06-11T04:50:40.929Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:50:40.931Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:50:44.433Z"}
+{"level":"info","message":"\n mongo db connected !! db host: ac-tnjvo6u-shard-00-00.hmnszdi.mongodb.net","timestamp":"2025-06-11T04:50:45.219Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:50:45.220Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:51:41.476Z"}
+{"level":"info","message":"\n mongo db connected !! db host: ac-tnjvo6u-shard-00-00.hmnszdi.mongodb.net","timestamp":"2025-06-11T04:51:42.278Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:51:42.279Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:51:50.984Z"}
+{"level":"info","message":"\n mongo db connected !! db host: ac-tnjvo6u-shard-00-00.hmnszdi.mongodb.net","timestamp":"2025-06-11T04:51:51.787Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:51:51.788Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:52:24.721Z"}
+{"level":"info","message":"\n mongo db connected !! db host: ac-tnjvo6u-shard-00-00.hmnszdi.mongodb.net","timestamp":"2025-06-11T04:52:25.485Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:52:25.487Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:52:43.675Z"}
+{"level":"info","message":"\n mongo db connected !! db host: ac-tnjvo6u-shard-00-00.hmnszdi.mongodb.net","timestamp":"2025-06-11T04:52:44.494Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:52:44.495Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:52:54.576Z"}
+{"level":"info","message":"\n mongo db connected !! db host: ac-tnjvo6u-shard-00-00.hmnszdi.mongodb.net","timestamp":"2025-06-11T04:52:55.359Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:52:55.360Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:53:00.000Z"}
+{"level":"info","message":"\n mongo db connected !! db host: ac-tnjvo6u-shard-00-00.hmnszdi.mongodb.net","timestamp":"2025-06-11T04:53:00.828Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:53:00.829Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:53:03.036Z"}
+{"level":"info","message":"\n mongo db connected !! db host: ac-tnjvo6u-shard-00-00.hmnszdi.mongodb.net","timestamp":"2025-06-11T04:53:04.126Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:53:04.130Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:53:12.572Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:53:13.522Z"}
+{"level":"info","message":"\n mongo db connected !! db host: ac-tnjvo6u-shard-00-00.hmnszdi.mongodb.net","timestamp":"2025-06-11T04:53:14.348Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:53:14.351Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:53:20.708Z"}
+{"level":"info","message":"\n mongo db connected !! db host: ac-tnjvo6u-shard-00-00.hmnszdi.mongodb.net","timestamp":"2025-06-11T04:53:21.484Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:53:21.486Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:53:31.680Z"}
+{"level":"info","message":"\n mongo db connected !! db host: ac-tnjvo6u-shard-00-00.hmnszdi.mongodb.net","timestamp":"2025-06-11T04:53:32.472Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:53:32.473Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:53:40.984Z"}
+{"level":"info","message":"\n mongo db connected !! db host: ac-tnjvo6u-shard-00-00.hmnszdi.mongodb.net","timestamp":"2025-06-11T04:53:41.792Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:53:41.795Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:54:05.420Z"}
+{"level":"info","message":"\n mongo db connected !! db host: ac-tnjvo6u-shard-00-00.hmnszdi.mongodb.net","timestamp":"2025-06-11T04:54:06.236Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:54:06.237Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:54:15.752Z"}
+{"level":"info","message":"\n mongo db connected !! db host: ac-tnjvo6u-shard-00-00.hmnszdi.mongodb.net","timestamp":"2025-06-11T04:54:16.567Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:54:16.570Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:54:19.058Z"}
+{"level":"info","message":"\n mongo db connected !! db host: ac-tnjvo6u-shard-00-00.hmnszdi.mongodb.net","timestamp":"2025-06-11T04:54:19.902Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:54:19.904Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:54:23.963Z"}
+{"level":"info","message":"\n mongo db connected !! db host: ac-tnjvo6u-shard-00-00.hmnszdi.mongodb.net","timestamp":"2025-06-11T04:54:24.797Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:54:24.798Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:54:51.224Z"}
+{"level":"info","message":"\n mongo db connected !! db host: ac-tnjvo6u-shard-00-00.hmnszdi.mongodb.net","timestamp":"2025-06-11T04:54:52.310Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:54:52.313Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:54:53.844Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:54:55.189Z"}
+{"level":"info","message":"\n mongo db connected !! db host: ac-tnjvo6u-shard-00-00.hmnszdi.mongodb.net","timestamp":"2025-06-11T04:54:55.955Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:54:55.956Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:54:56.677Z"}
+{"level":"info","message":"\n mongo db connected !! db host: ac-tnjvo6u-shard-00-00.hmnszdi.mongodb.net","timestamp":"2025-06-11T04:54:57.881Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:54:57.883Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:55:11.005Z"}
+{"level":"info","message":"\n mongo db connected !! db host: ac-tnjvo6u-shard-00-00.hmnszdi.mongodb.net","timestamp":"2025-06-11T04:55:11.824Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:55:11.826Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:55:18.932Z"}
+{"level":"info","message":"\n mongo db connected !! db host: ac-tnjvo6u-shard-00-00.hmnszdi.mongodb.net","timestamp":"2025-06-11T04:55:19.735Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T04:55:19.736Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-11T18:50:51.625Z"}
+{"cause":{"commonWireVersion":0,"compatible":true,"heartbeatFrequencyMS":10000,"localThresholdMS":15,"logicalSessionTimeoutMinutes":null,"maxElectionId":null,"maxSetVersion":null,"servers":{"ac-tnjvo6u-shard-00-00.hmnszdi.mongodb.net:27017":{"$clusterTime":null,"address":"ac-tnjvo6u-shard-00-00.hmnszdi.mongodb.net:27017","arbiters":[],"electionId":null,"error":{"beforeHandshake":false,"errorLabelSet":{}},"hosts":[],"iscryptd":false,"lastUpdateTime":48969932,"lastWriteDate":0,"logicalSessionTimeoutMinutes":null,"maxBsonObjectSize":null,"maxMessageSizeBytes":null,"maxWireVersion":0,"maxWriteBatchSize":null,"me":null,"minRoundTripTime":0,"minWireVersion":0,"passives":[],"primary":null,"roundTripTime":-1,"setName":null,"setVersion":null,"tags":{},"topologyVersion":null,"type":"Unknown"},"ac-tnjvo6u-shard-00-01.hmnszdi.mongodb.net:27017":{"$clusterTime":null,"address":"ac-tnjvo6u-shard-00-01.hmnszdi.mongodb.net:27017","arbiters":[],"electionId":null,"error":{"beforeHandshake":false,"errorLabelSet":{}},"hosts":[],"iscryptd":false,"lastUpdateTime":48969884,"lastWriteDate":0,"logicalSessionTimeoutMinutes":null,"maxBsonObjectSize":null,"maxMessageSizeBytes":null,"maxWireVersion":0,"maxWriteBatchSize":null,"me":null,"minRoundTripTime":0,"minWireVersion":0,"passives":[],"primary":null,"roundTripTime":-1,"setName":null,"setVersion":null,"tags":{},"topologyVersion":null,"type":"Unknown"},"ac-tnjvo6u-shard-00-02.hmnszdi.mongodb.net:27017":{"$clusterTime":null,"address":"ac-tnjvo6u-shard-00-02.hmnszdi.mongodb.net:27017","arbiters":[],"electionId":null,"error":{"beforeHandshake":false,"errorLabelSet":{}},"hosts":[],"iscryptd":false,"lastUpdateTime":48969871,"lastWriteDate":0,"logicalSessionTimeoutMinutes":null,"maxBsonObjectSize":null,"maxMessageSizeBytes":null,"maxWireVersion":0,"maxWriteBatchSize":null,"me":null,"minRoundTripTime":0,"minWireVersion":0,"passives":[],"primary":null,"roundTripTime":-1,"setName":null,"setVersion":null,"tags":{},"topologyVersion":null,"type":"Unknown"}},"setName":"atlas-omnkxx-shard-0","stale":false,"type":"ReplicaSetNoPrimary"},"errorLabelSet":{},"level":"warn","message":"MOngoDB connection erroe Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/","reason":{"commonWireVersion":0,"compatible":true,"heartbeatFrequencyMS":10000,"localThresholdMS":15,"logicalSessionTimeoutMinutes":null,"maxElectionId":null,"maxSetVersion":null,"servers":{"ac-tnjvo6u-shard-00-00.hmnszdi.mongodb.net:27017":{"$clusterTime":null,"address":"ac-tnjvo6u-shard-00-00.hmnszdi.mongodb.net:27017","arbiters":[],"electionId":null,"error":{"beforeHandshake":false,"errorLabelSet":{}},"hosts":[],"iscryptd":false,"lastUpdateTime":48969932,"lastWriteDate":0,"logicalSessionTimeoutMinutes":null,"maxBsonObjectSize":null,"maxMessageSizeBytes":null,"maxWireVersion":0,"maxWriteBatchSize":null,"me":null,"minRoundTripTime":0,"minWireVersion":0,"passives":[],"primary":null,"roundTripTime":-1,"setName":null,"setVersion":null,"tags":{},"topologyVersion":null,"type":"Unknown"},"ac-tnjvo6u-shard-00-01.hmnszdi.mongodb.net:27017":{"$clusterTime":null,"address":"ac-tnjvo6u-shard-00-01.hmnszdi.mongodb.net:27017","arbiters":[],"electionId":null,"error":{"beforeHandshake":false,"errorLabelSet":{}},"hosts":[],"iscryptd":false,"lastUpdateTime":48969884,"lastWriteDate":0,"logicalSessionTimeoutMinutes":null,"maxBsonObjectSize":null,"maxMessageSizeBytes":null,"maxWireVersion":0,"maxWriteBatchSize":null,"me":null,"minRoundTripTime":0,"minWireVersion":0,"passives":[],"primary":null,"roundTripTime":-1,"setName":null,"setVersion":null,"tags":{},"topologyVersion":null,"type":"Unknown"},"ac-tnjvo6u-shard-00-02.hmnszdi.mongodb.net:27017":{"$clusterTime":null,"address":"ac-tnjvo6u-shard-00-02.hmnszdi.mongodb.net:27017","arbiters":[],"electionId":null,"error":{"beforeHandshake":false,"errorLabelSet":{}},"hosts":[],"iscryptd":false,"lastUpdateTime":48969871,"lastWriteDate":0,"logicalSessionTimeoutMinutes":null,"maxBsonObjectSize":null,"maxMessageSizeBytes":null,"maxWireVersion":0,"maxWriteBatchSize":null,"me":null,"minRoundTripTime":0,"minWireVersion":0,"passives":[],"primary":null,"roundTripTime":-1,"setName":null,"setVersion":null,"tags":{},"topologyVersion":null,"type":"Unknown"}},"setName":"atlas-omnkxx-shard-0","stale":false,"type":"ReplicaSetNoPrimary"},"stack":"MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/\n    at _handleConnectionErrors (C:\\FSDM\\WIL\\WIL_Project\\backend\\node_modules\\mongoose\\lib\\connection.js:1165:11)\n    at NativeConnection.openUri (C:\\FSDM\\WIL\\WIL_Project\\backend\\node_modules\\mongoose\\lib\\connection.js:1096:11)\n    at async connectDB (file:///C:/FSDM/WIL/WIL_Project/backend/db/index.js:7:32)","timestamp":"2025-06-11T18:51:21.725Z"}
