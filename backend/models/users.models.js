@@ -1,5 +1,5 @@
 import mongoose, { Schema } from "mongoose";
-import bcrypt from "bcryptjs";
+import bcrypt from "bcrypt";
 import UserProfile from "./userProfile.models.js";
 
 const userSchema = new Schema(
@@ -13,7 +13,7 @@ const userSchema = new Schema(
     },
     username: {
       type: String,
-      required: true,
+      
       unique: true,
       trim: true,
       index: true,

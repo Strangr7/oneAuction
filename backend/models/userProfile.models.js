@@ -9,10 +9,10 @@ const userProfileSchema = new Schema({
         type: String,
         required: true,
     },
-    phone:{type: String, required: true,minLength: 10,},
+    phone:{type: String,minLength: 10,},
     avatarUrl:{
         type: String,
-        required: true,
+        
     },
     user:{
         type: mongoose.Schema.Types.ObjectId,
