@@ -4,10 +4,12 @@ const userProfileSchema = new Schema({
     firstName:{
         type: String,
         required: true,
+        trim:true,
     },
     lastName:{
         type: String,
         required: true,
+        trim:true,
     },
     phone:{type: String,minLength: 10,},
     avatarUrl:{
