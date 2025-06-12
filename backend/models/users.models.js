@@ -13,8 +13,6 @@ const userSchema = new Schema(
     },
     username: {
       type: String,
-      
-      unique: true,
       trim: true,
       index: true,
     },
@@ -33,9 +31,7 @@ const userSchema = new Schema(
       enum: ["active", "inactive", "banned"],
       default: "active",
     },
-    lastLogin: { type: Date,
-      default: Date.now,
-     },
+    lastLogin: { type: Date, default: Date.now },
     refreshToken: { type: String, default: null },
   },
   {
@@ -43,6 +39,7 @@ const userSchema = new Schema(
   }
 );
 
+//pre save hook to hash password
 userSchema.pre("save", async function (next) {
   try {
     if (!this.isModified("password")) return next();
@@ -54,21 +51,21 @@ userSchema.pre("save", async function (next) {
   }
 });
 
+// Method to compare password
 userSchema.methods.comparePassword = async function (password) {
   return await bcrypt.compare(password, this.password);
 };
 
-userSchema.pre(
-  "findOneAndDelete", async function (next) {
-    const user = await this.model.findOne(this.getFilter());
-    if(user){
-      await UserProfile.deleteOne({
-        user: user._id,
-      });
-    }
-    next();
+//pre findOneAndDelete hook to delete userProfile along with user(cascade delete)
+userSchema.pre("findOneAndDelete", async function (next) {
+  const user = await this.model.findOne(this.getFilter());
+  if (user) {
+    await UserProfile.deleteOne({
+      user: user._id,
+    });
   }
-)
+  next();
+});
 
 const User = mongoose.model("User", userSchema);
 
