@@ -90,3 +90,65 @@ const registerUser = asyncHandler(async (req, res) => {
 });
 
 export { registerUser };
+
+
+// User login
+// POST /api/user/login
+const loginUser = asyncHandler(async (req, res) => {
+  const { emailOrUsername, password } = req.body;
+
+  // Validate required fields
+  if (!emailOrUsername || !password) {
+    throw new apiError(400, "Email/Username and password are required.");
+  }
+
+  // Find user by email or username
+  const user = await User.findOne({ $or: [{ email: emailOrUsername }, { username: emailOrUsername }], });
+
+  if (!user) {
+    throw new apiError(401, "Invalid email/username or password.");
+  }
+
+  // Check if account is active
+  if (user.status !== "active") {
+    throw new apiError(403, "Account is not active. Please contact support.");
+  }
+
+  // Compare password
+  const isPasswordValid = await user.comparePassword(password);
+
+  if (!isPasswordValid) {
+    throw new apiError(401, "Invalid email/username or password.");
+  }
+
+  // Fetch user profile
+  const profile = await UserProfile.findOne({ user: user._id });
+
+  // Optional: Update last login timestamp
+  user.lastLogin = new Date();
+  await user.save();
+
+  // Send success response
+  return res.status(200).json(
+    new APIResponse(
+      200,
+      {
+        user: {
+          _id: user._id,
+          email: user.email,
+          username: user.username,
+          role: user.role,
+          profile: {
+            firstName: profile.firstName,
+            lastName: profile.lastName,
+            phone: profile.phone,
+            avatarUrl: profile.avatarUrl,
+          },
+        },
+      },
+      "Login successful"
+    )
+  );
+});
+
+export { loginUser };
