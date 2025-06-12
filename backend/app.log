@@ -69,3 +69,36 @@
 {"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-12T18:54:20.438Z"}
 {"level":"info","message":"\n mongo db connected !! db host: ac-tnjvo6u-shard-00-01.hmnszdi.mongodb.net","timestamp":"2025-06-12T18:54:25.996Z"}
 {"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-12T18:54:26.025Z"}
+{"level":"info","message":"\n mongo db connected !! db host: ac-tnjvo6u-shard-00-02.hmnszdi.mongodb.net","timestamp":"2025-06-12T19:28:40.134Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-12T19:28:40.159Z"}
+{"level":"error","message":"emailOrUsername is not defined","stack":"Error: emailOrUsername is not defined\n    at file:///S:/Lambton/Term-4%20WIL/WIL/oneAuction/backend/utils/asyncHandler.js:6:10\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","statusCode":500,"timestamp":"2025-06-12T19:28:44.132Z"}
+{"level":"info","message":"{\"method\":\"POST\",\"url\":\"/api/user/login\",\"status\":\"500\",\"responseTime\":5.228}","timestamp":"2025-06-12T19:28:44.137Z"}
+{"level":"error","message":"emailOrUsername is not defined","stack":"Error: emailOrUsername is not defined\n    at file:///S:/Lambton/Term-4%20WIL/WIL/oneAuction/backend/utils/asyncHandler.js:6:10\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","statusCode":500,"timestamp":"2025-06-12T19:28:56.210Z"}
+{"level":"info","message":"{\"method\":\"POST\",\"url\":\"/api/user/login\",\"status\":\"500\",\"responseTime\":3.285}","timestamp":"2025-06-12T19:28:56.214Z"}
+{"level":"error","message":"emailOrUsername is not defined","stack":"Error: emailOrUsername is not defined\n    at file:///S:/Lambton/Term-4%20WIL/WIL/oneAuction/backend/utils/asyncHandler.js:6:10\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","statusCode":500,"timestamp":"2025-06-12T19:30:04.404Z"}
+{"level":"info","message":"{\"method\":\"POST\",\"url\":\"/api/user/login\",\"status\":\"500\",\"responseTime\":1.719}","timestamp":"2025-06-12T19:30:04.405Z"}
+{"level":"error","message":"emailOrUsername is not defined","stack":"Error: emailOrUsername is not defined\n    at file:///S:/Lambton/Term-4%20WIL/WIL/oneAuction/backend/utils/asyncHandler.js:6:10\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","statusCode":500,"timestamp":"2025-06-12T19:31:00.754Z"}
+{"level":"info","message":"{\"method\":\"POST\",\"url\":\"/api/user/login\",\"status\":\"500\",\"responseTime\":2.455}","timestamp":"2025-06-12T19:31:00.756Z"}
+{"level":"error","message":"emailOrUsername is not defined","stack":"Error: emailOrUsername is not defined\n    at file:///S:/Lambton/Term-4%20WIL/WIL/oneAuction/backend/utils/asyncHandler.js:6:10\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","statusCode":500,"timestamp":"2025-06-12T19:32:32.271Z"}
+{"level":"info","message":"{\"method\":\"POST\",\"url\":\"/api/user/login\",\"status\":\"500\",\"responseTime\":3.142}","timestamp":"2025-06-12T19:32:32.273Z"}
+{"level":"error","message":"emailOrUsername is not defined","stack":"Error: emailOrUsername is not defined\n    at file:///S:/Lambton/Term-4%20WIL/WIL/oneAuction/backend/utils/asyncHandler.js:6:10\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","statusCode":500,"timestamp":"2025-06-12T19:32:50.311Z"}
+{"level":"info","message":"{\"method\":\"POST\",\"url\":\"/api/user/login\",\"status\":\"500\",\"responseTime\":1.626}","timestamp":"2025-06-12T19:32:50.312Z"}
+{"level":"error","message":"emailOrUsername is not defined","stack":"Error: emailOrUsername is not defined\n    at file:///S:/Lambton/Term-4%20WIL/WIL/oneAuction/backend/utils/asyncHandler.js:6:10\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","statusCode":500,"timestamp":"2025-06-12T19:33:52.109Z"}
+{"level":"info","message":"{\"method\":\"POST\",\"url\":\"/api/user/login\",\"status\":\"500\",\"responseTime\":2.324}","timestamp":"2025-06-12T19:33:52.111Z"}
+{"level":"info","message":"\n mongo db connected !! db host: ac-tnjvo6u-shard-00-00.hmnszdi.mongodb.net","timestamp":"2025-06-12T19:37:32.823Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-12T19:37:32.849Z"}
+{"level":"info","message":"{\"method\":\"POST\",\"url\":\"/api/user/login\",\"status\":\"200\",\"responseTime\":359.66}","timestamp":"2025-06-12T19:37:45.199Z"}
+{"level":"info","message":"{\"method\":\"POST\",\"url\":\"/api/user/login\",\"status\":\"200\",\"responseTime\":310.647}","timestamp":"2025-06-12T19:38:00.620Z"}
+{"level":"error","message":"Invalid email/username or password.","stack":"Error: Invalid email/username or password.\n    at file:///S:/Lambton/Term-4%20WIL/WIL/oneAuction/backend/utils/asyncHandler.js:6:10\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","statusCode":500,"timestamp":"2025-06-12T19:38:14.785Z"}
+{"level":"info","message":"{\"method\":\"POST\",\"url\":\"/api/user/login\",\"status\":\"500\",\"responseTime\":83.572}","timestamp":"2025-06-12T19:38:14.786Z"}
+{"level":"error","message":"Invalid email/username or password.","stack":"Error: Invalid email/username or password.\n    at file:///S:/Lambton/Term-4%20WIL/WIL/oneAuction/backend/utils/asyncHandler.js:6:10","statusCode":500,"timestamp":"2025-06-12T19:38:28.920Z"}
+{"level":"info","message":"{\"method\":\"POST\",\"url\":\"/api/user/login\",\"status\":\"500\",\"responseTime\":151.596}","timestamp":"2025-06-12T19:38:28.921Z"}
+{"level":"info","message":"{\"method\":\"POST\",\"url\":\"/api/user/login\",\"status\":\"200\",\"responseTime\":308.664}","timestamp":"2025-06-12T19:38:37.158Z"}
+{"level":"info","message":"\n mongo db connected !! db host: ac-tnjvo6u-shard-00-00.hmnszdi.mongodb.net","timestamp":"2025-06-12T19:38:52.216Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-12T19:38:52.233Z"}
+{"level":"info","message":"\n mongo db connected !! db host: ac-tnjvo6u-shard-00-02.hmnszdi.mongodb.net","timestamp":"2025-06-12T19:45:40.833Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-12T19:45:40.854Z"}
+{"level":"info","message":"{\"method\":\"POST\",\"url\":\"/api/user/login\",\"status\":\"200\",\"responseTime\":340.733}","timestamp":"2025-06-12T19:45:45.285Z"}
+{"level":"error","message":"Invalid email/username or password.","stack":"Error: Invalid email/username or password.\n    at file:///S:/Lambton/Term-4%20WIL/WIL/oneAuction/backend/utils/asyncHandler.js:6:10\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","statusCode":500,"timestamp":"2025-06-12T19:45:50.545Z"}
+{"level":"info","message":"{\"method\":\"POST\",\"url\":\"/api/user/login\",\"status\":\"500\",\"responseTime\":80.212}","timestamp":"2025-06-12T19:45:50.547Z"}
+{"level":"info","message":"{\"method\":\"POST\",\"url\":\"/api/user/login\",\"status\":\"200\",\"responseTime\":311.201}","timestamp":"2025-06-12T19:45:58.713Z"}

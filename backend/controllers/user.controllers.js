@@ -95,18 +95,18 @@ export { registerUser };
 // User login
 // POST /api/user/login
 const loginUser = asyncHandler(async (req, res) => {
-  const { email, password } = req.body;
+  const { emailOrUsername, password } = req.body;
 
   // Validate required fields
-  if (!email || !password) {
-    throw new apiError(400, "Email and password are required.");
+  if (!emailOrUsername || !password) {
+    throw new apiError(400, "Email/Username and password are required.");
   }
 
-  // Find user by email
-  const user = await User.findOne({ email });
+  // Find user by email or username
+  const user = await User.findOne({ $or: [{ email: emailOrUsername }, { username: emailOrUsername }], });
 
   if (!user) {
-    throw new apiError(401, "Invalid email or password.");
+    throw new apiError(401, "Invalid email/username or password.");
   }
 
   // Check if account is active
@@ -118,7 +118,7 @@ const loginUser = asyncHandler(async (req, res) => {
   const isPasswordValid = await user.comparePassword(password);
 
   if (!isPasswordValid) {
-    throw new apiError(401, "Invalid email or password.");
+    throw new apiError(401, "Invalid email/username or password.");
   }
 
   // Fetch user profile
