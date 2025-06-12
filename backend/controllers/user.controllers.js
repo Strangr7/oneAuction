@@ -90,3 +90,65 @@ const registerUser = asyncHandler(async (req, res) => {
 });
 
 export { registerUser };
+
+
+// User login
+// POST /api/user/login
+const loginUser = asyncHandler(async (req, res) => {
+  const { email, password } = req.body;
+
+  // Validate required fields
+  if (!email || !password) {
+    throw new apiError(400, "Email and password are required.");
+  }
+
+  // Find user by email
+  const user = await User.findOne({ email });
+
+  if (!user) {
+    throw new apiError(401, "Invalid email or password.");
+  }
+
+  // Check if account is active
+  if (user.status !== "active") {
+    throw new apiError(403, "Account is not active. Please contact support.");
+  }
+
+  // Compare password
+  const isPasswordValid = await user.comparePassword(password);
+
+  if (!isPasswordValid) {
+    throw new apiError(401, "Invalid email or password.");
+  }
+
+  // Fetch user profile
+  const profile = await UserProfile.findOne({ user: user._id });
+
+  // Optional: Update last login timestamp
+  user.lastLogin = new Date();
+  await user.save();
+
+  // Send success response
+  return res.status(200).json(
+    new APIResponse(
+      200,
+      {
+        user: {
+          _id: user._id,
+          email: user.email,
+          username: user.username,
+          role: user.role,
+          profile: {
+            firstName: profile.firstName,
+            lastName: profile.lastName,
+            phone: profile.phone,
+            avatarUrl: profile.avatarUrl,
+          },
+        },
+      },
+      "Login successful"
+    )
+  );
+});
+
+export { loginUser };

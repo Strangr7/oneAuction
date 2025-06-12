@@ -50,3 +50,22 @@
 {"level":"info","message":"{\"method\":\"POST\",\"url\":\"/api/user/register\",\"status\":\"201\",\"responseTime\":345.182}","timestamp":"2025-06-12T18:01:52.571Z"}
 {"level":"info","message":"\n mongo db connected !! db host: ac-tnjvo6u-shard-00-00.hmnszdi.mongodb.net","timestamp":"2025-06-12T18:04:12.119Z"}
 {"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-12T18:04:12.125Z"}
+{"level":"info","message":"\n mongo db connected !! db host: ac-tnjvo6u-shard-00-02.hmnszdi.mongodb.net","timestamp":"2025-06-12T18:44:04.779Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-12T18:44:04.795Z"}
+{"level":"error","message":"Password must be at least 8 characters long, contain at least one uppercase letter, one lowercase letter, one number, and one special character.","stack":"Error: Password must be at least 8 characters long, contain at least one uppercase letter, one lowercase letter, one number, and one special character.\n    at file:///S:/Lambton/Term-4%20WIL/WIL/oneAuction/backend/utils/asyncHandler.js:6:10\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","statusCode":500,"timestamp":"2025-06-12T18:49:10.368Z"}
+{"level":"info","message":"{\"method\":\"POST\",\"url\":\"/api/user/register\",\"status\":\"500\",\"responseTime\":7.297}","timestamp":"2025-06-12T18:49:10.374Z"}
+{"level":"info","message":"{\"method\":\"POST\",\"url\":\"/api/user/register\",\"status\":\"201\",\"responseTime\":590.548}","timestamp":"2025-06-12T18:49:50.639Z"}
+{"level":"info","message":"{\"method\":\"POST\",\"url\":\"/api/user/login\",\"status\":\"200\",\"responseTime\":368.46}","timestamp":"2025-06-12T18:50:33.225Z"}
+{"level":"error","message":"Invalid email or password.","stack":"Error: Invalid email or password.\n    at file:///S:/Lambton/Term-4%20WIL/WIL/oneAuction/backend/utils/asyncHandler.js:6:10","statusCode":500,"timestamp":"2025-06-12T18:51:06.793Z"}
+{"level":"info","message":"{\"method\":\"POST\",\"url\":\"/api/user/login\",\"status\":\"500\",\"responseTime\":144.141}","timestamp":"2025-06-12T18:51:06.793Z"}
+{"level":"error","message":"Invalid email or password.","stack":"Error: Invalid email or password.\n    at file:///S:/Lambton/Term-4%20WIL/WIL/oneAuction/backend/utils/asyncHandler.js:6:10\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","statusCode":500,"timestamp":"2025-06-12T18:51:20.043Z"}
+{"level":"info","message":"{\"method\":\"POST\",\"url\":\"/api/user/login\",\"status\":\"500\",\"responseTime\":75.973}","timestamp":"2025-06-12T18:51:20.044Z"}
+{"level":"error","message":"Email and password are required.","stack":"Error: Email and password are required.\n    at file:///S:/Lambton/Term-4%20WIL/WIL/oneAuction/backend/utils/asyncHandler.js:6:10\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","statusCode":500,"timestamp":"2025-06-12T18:51:50.816Z"}
+{"level":"info","message":"{\"method\":\"POST\",\"url\":\"/api/user/login\",\"status\":\"500\",\"responseTime\":1.876}","timestamp":"2025-06-12T18:51:50.818Z"}
+{"level":"error","message":"Email and password are required.","stack":"Error: Email and password are required.\n    at file:///S:/Lambton/Term-4%20WIL/WIL/oneAuction/backend/utils/asyncHandler.js:6:10\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","statusCode":500,"timestamp":"2025-06-12T18:52:05.838Z"}
+{"level":"info","message":"{\"method\":\"POST\",\"url\":\"/api/user/login\",\"status\":\"500\",\"responseTime\":1.755}","timestamp":"2025-06-12T18:52:05.839Z"}
+{"level":"info","message":"{\"method\":\"POST\",\"url\":\"/api/user/login\",\"status\":\"200\",\"responseTime\":328.545}","timestamp":"2025-06-12T18:53:21.837Z"}
+{"level":"info","message":"\n mongo db connected !! db host: ac-tnjvo6u-shard-00-01.hmnszdi.mongodb.net","timestamp":"2025-06-12T18:54:20.423Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-12T18:54:20.438Z"}
+{"level":"info","message":"\n mongo db connected !! db host: ac-tnjvo6u-shard-00-01.hmnszdi.mongodb.net","timestamp":"2025-06-12T18:54:25.996Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-12T18:54:26.025Z"}
