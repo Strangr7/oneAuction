@@ -17,7 +17,7 @@ const errorHandler = (err, req, res, next) => {
     error = new apiError(400, `Invalid value for ${err.path}`);
   } else if (err.code === 11000) {
     error = new apiError(409, "Duplicate key error");
-  } else if (!(error instanceof APIError)) {
+  } else if (!(error instanceof apiError)) {
     const statusCode = error.statusCode || 500;
     const message = error.message || "Something went wrong";
     error = new apiError(statusCode, message, [], err.stack);

@@ -4,6 +4,7 @@ import logger from "./utils/logger.js";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import { errorHandler } from "./middlewares/error.middlewares.js";
+import userRoutes from "./routes/user.routes.js"
 
 const app = express();
 
@@ -36,6 +37,8 @@ app.use(
     },
   })
 );
+
+app.use("/api/user",userRoutes);
 
 app.use(errorHandler);
 export { app };

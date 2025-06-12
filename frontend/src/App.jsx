@@ -1,6 +1,8 @@
 import React from 'react';
 import { Outlet, Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
+import RegistrationForm from './pages/Register/RegistrationForm';
 
 function App() {
   return (
@@ -11,6 +13,7 @@ function App() {
         </div>
       </nav>
       <Outlet />
+      <RegistrationForm />
     </div>
   );
 }
