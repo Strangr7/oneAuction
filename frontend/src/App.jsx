@@ -1,5 +1,6 @@
 
 import './App.css'
+import RegistrationForm from './pages/Register/RegistrationForm'
 
 function App() {
   
@@ -7,7 +8,8 @@ function App() {
   return (
     
     <div>
-      <h1>Welcome</h1>
+    
+      <RegistrationForm></RegistrationForm>
     </div>
   )
 }
