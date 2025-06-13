@@ -1,72 +1,104 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import FormInput from '../components/FormInput.jsx';
+import Button from '../components/Button.jsx';
+import validateForm from '../utils/validation/validateForm.js';
+import { loginUser } from '../services/userService';
 
 const Login = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
+  const [formData, setFormData] = useState({
+    identifier: '', // Changed from email to identifier
+    password: '',
+  });
+  const [errors, setErrors] = useState({});
+  const [message, setMessage] = useState('');
   const navigate = useNavigate();
+
+  useEffect(() => {
+    document.title = 'OneAuction - Login';
+  }, []);
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      // Placeholder for API call to your MERN backend
-      const response = await fetch('http://localhost:5000/api/auth/login', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email, password }),
-      });
+    const validationErrors = validateForm(formData);
+    setErrors(validationErrors);
 
-      if (response.ok) {
-        const data = await response.json();
-        localStorage.setItem('token', data.token);
+    if (Object.keys(validationErrors).length === 0) {
+      try {
+        const data = await loginUser(formData);
+        localStorage.setItem('token', data.accessToken); // Use accessToken from backend response
+        setMessage(
+          <div className="text-success text-center mb-3">
+            {data?.message || 'Login successful!'}
+          </div>
+        );
         navigate('/dashboard');
-      } else {
-        setError('Invalid email or password');
+      } catch (error) {
+        const msg =
+          error.message || 'Login failed. Please try again.';
+        setMessage(<div className="text-danger text-center mb-3">{msg}</div>);
       }
-    } catch (err) {
-      setError('Something went wrong. Please try again.');
+    } else {
+      setMessage('');
     }
   };
 
   return (
-    <div className="container d-flex justify-content-center align-items-center vh-100">
-      <div className="card p-4" style={{ maxWidth: '400px', width: '100%' }}>
-        <h2 className="text-center mb-4">Login</h2>
-        {error && <div className="alert alert-danger">{error}</div>}
-        <form onSubmit={handleSubmit}>
-          <div className="mb-3">
-            <label htmlFor="email" className="form-label">Email address</label>
-            <input
-              type="email"
-              className="form-control"
-              id="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
+    <section className="register-page">
+      <form className="register-form" onSubmit={handleSubmit} noValidate>
+        <section className="logo-container text-center">
+          <h3>Login</h3>
+        </section>
+
+        <div className="form-wrapper">
+          <FormInput
+            label="Email Address*"
+            id="identifier"
+            name="identifier" // Changed to identifier
+            type="email"
+            value={formData.identifier}
+            onChange={handleChange}
+            error={errors.identifier} // Update error key
+          />
+          <FormInput
+            label="Password*"
+            id="password"
+            name="password"
+            type="password"
+            value={formData.password}
+            onChange={handleChange}
+            error={errors.password}
+          />
+
+          {message}
+
+          <div className="register-actions d-flex flex-column justify-content-between align-items-center">
+            <Button
+              type="submit"
+              className="btn btn-info btn-register d-flex align-items-center"
+            >
+              Login
+            </Button>
           </div>
-          <div className="mb-3">
-            <label htmlFor="password" className="form-label">Password</label>
-            <input
-              type="password"
-              className="form-control"
-              id="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-            />
-          </div>
-          <button type="submit" className="btn btn-primary w-100">Login</button>
-        </form>
-        <p className="mt-3 text-center">
-          Don't have an account? <Link to="/register">Register</Link>
-        </p>
-      </div>
-    </div>
+
+          <p className="text-center text-muted mt-3">
+            <Link to="/forgot-password" className="text-primary text-decoration-none">
+              Forgot Password?
+            </Link>
+          </p>
+          <p className="text-center text-muted mt-3">
+            Don't have an account?{' '}
+            <Link to="/register" className="text-primary text-decoration-none">
+              Register
+            </Link>
+          </p>
+        </div>
+      </form>
+    </section>
   );
 };
 

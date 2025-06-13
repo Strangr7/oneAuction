@@ -20,3 +20,20 @@ export const registerUser = async (formData) => {
 
   return response.data;
 };
+
+
+export const loginUser = async (formData) => {
+  const response = await fetch('http://localhost:3000/api/user/login', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(formData),
+  });
+
+  if (!response.ok) {
+    throw new Error('Login failed');
+  }
+
+  return response.json();
+};
