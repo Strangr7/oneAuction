@@ -108,7 +108,6 @@ const loginUser = asyncHandler(async (req, res) => {
   if (!profile) {
     throw new apiError(500, "User profile not found.");
   }
-
   // Generate JWT tokens for authentication
   // Access token: short-lived, used for API requests
   // Refresh token: long-lived, used to generate new access tokens
@@ -149,7 +148,6 @@ const loginUser = asyncHandler(async (req, res) => {
     )
   );
 });
-
 
 /**
  * @desc Logs out a user by clearing the refresh token cookie
@@ -193,7 +191,5 @@ const userLogOut = asyncHandler(async (req, res) => {
     .status(200)
     .json(new APIResponse(200, null, "User logged out successfully."));
 });
- 
-
 
 export { registerUser, loginUser, userLogOut };

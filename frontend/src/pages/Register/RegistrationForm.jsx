@@ -6,8 +6,6 @@ import { useEffect } from "react";
 import "./register.css";
 import { registerUser } from "../../services/userService";
 
-
-
 const RegistrationForm = () => {
   const [formData, setFormData] = useState({
     firstName: "",

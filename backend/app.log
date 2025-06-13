@@ -1,0 +1,10 @@
+{"level":"info","message":"\n mongo db connected !! db host: ac-tnjvo6u-shard-00-01.hmnszdi.mongodb.net","timestamp":"2025-06-13T19:44:57.925Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-13T19:44:57.933Z"}
+{"level":"info","message":"{\"method\":\"POST\",\"url\":\"/api/user/login\",\"status\":\"200\",\"responseTime\":715.308}","timestamp":"2025-06-13T19:45:23.229Z"}
+{"level":"info","message":"\n mongo db connected !! db host: ac-tnjvo6u-shard-00-01.hmnszdi.mongodb.net","timestamp":"2025-06-13T20:49:37.362Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-13T20:49:37.373Z"}
+{"level":"info","message":"New user registered","timestamp":"2025-06-13T20:50:35.919Z","userId":"684c8f1b938e598e6f1eacc5"}
+{"level":"info","message":"{\"method\":\"POST\",\"url\":\"/api/user/register\",\"status\":\"201\",\"responseTime\":548.88}","timestamp":"2025-06-13T20:50:35.931Z"}
+{"level":"info","message":"\n mongo db connected !! db host: ac-tnjvo6u-shard-00-00.hmnszdi.mongodb.net","timestamp":"2025-06-13T20:52:22.343Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-13T20:52:22.346Z"}
+{"level":"info","message":"{\"method\":\"POST\",\"url\":\"/api/user/login\",\"status\":\"200\",\"responseTime\":616.87}","timestamp":"2025-06-13T20:54:56.826Z"}
