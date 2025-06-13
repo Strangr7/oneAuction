@@ -366,3 +366,25 @@
 {"level":"info","message":"{\"method\":\"POST\",\"url\":\"/api/user/login\",\"status\":\"200\",\"responseTime\":299.729}","timestamp":"2025-06-12T23:45:55.458Z"}
 {"level":"info","message":"{\"method\":\"GET\",\"url\":\"/api/user/refresh-token\",\"status\":\"200\",\"responseTime\":82.92}","timestamp":"2025-06-12T23:46:13.941Z"}
 {"level":"info","message":"{\"method\":\"GET\",\"url\":\"/api/user/refresh-token\",\"status\":\"200\",\"responseTime\":73.272}","timestamp":"2025-06-12T23:48:40.354Z"}
+{"level":"info","message":"\n mongo db connected !! db host: ac-tnjvo6u-shard-00-00.hmnszdi.mongodb.net","timestamp":"2025-06-13T19:21:12.350Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-13T19:21:12.361Z"}
+{"level":"error","message":"secretOrPrivateKey must have a value","stack":"Error: secretOrPrivateKey must have a value\n    at file:///S:/Lambton/Term-4%20WIL/WIL/oneAuction/backend/utils/asyncHandler.js:6:10\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","statusCode":500,"timestamp":"2025-06-13T19:22:02.215Z"}
+{"level":"info","message":"{\"method\":\"POST\",\"url\":\"/api/user/login\",\"status\":\"500\",\"responseTime\":320.598}","timestamp":"2025-06-13T19:22:02.223Z"}
+{"level":"error","message":"Email or username already in use.","stack":"Error: Email or username already in use.\n    at file:///S:/Lambton/Term-4%20WIL/WIL/oneAuction/backend/utils/asyncHandler.js:6:10\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","statusCode":500,"timestamp":"2025-06-13T19:35:29.388Z"}
+{"level":"info","message":"{\"method\":\"POST\",\"url\":\"/api/user/register\",\"status\":\"500\",\"responseTime\":237.473}","timestamp":"2025-06-13T19:35:29.389Z"}
+{"level":"info","message":"New user registered","timestamp":"2025-06-13T19:35:35.947Z","userId":"684c7d878b07666ed416a79e"}
+{"level":"info","message":"{\"method\":\"POST\",\"url\":\"/api/user/register\",\"status\":\"201\",\"responseTime\":543.208}","timestamp":"2025-06-13T19:35:35.948Z"}
+{"level":"error","message":"secretOrPrivateKey must have a value","stack":"Error: secretOrPrivateKey must have a value\n    at file:///S:/Lambton/Term-4%20WIL/WIL/oneAuction/backend/utils/asyncHandler.js:6:10\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","statusCode":500,"timestamp":"2025-06-13T19:35:49.620Z"}
+{"level":"info","message":"{\"method\":\"POST\",\"url\":\"/api/user/login\",\"status\":\"500\",\"responseTime\":271.845}","timestamp":"2025-06-13T19:35:49.621Z"}
+{"level":"error","message":"secretOrPrivateKey must have a value","stack":"Error: secretOrPrivateKey must have a value\n    at file:///S:/Lambton/Term-4%20WIL/WIL/oneAuction/backend/utils/asyncHandler.js:6:10\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","statusCode":500,"timestamp":"2025-06-13T19:37:10.374Z"}
+{"level":"info","message":"{\"method\":\"POST\",\"url\":\"/api/user/login\",\"status\":\"500\",\"responseTime\":276.133}","timestamp":"2025-06-13T19:37:10.375Z"}
+{"level":"info","message":"\n mongo db connected !! db host: ac-tnjvo6u-shard-00-01.hmnszdi.mongodb.net","timestamp":"2025-06-13T19:37:40.181Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-13T19:37:40.187Z"}
+{"level":"info","message":"{\"method\":\"POST\",\"url\":\"/api/user/login\",\"status\":\"200\",\"responseTime\":474.045}","timestamp":"2025-06-13T19:37:45.849Z"}
+{"level":"info","message":"\n mongo db connected !! db host: ac-tnjvo6u-shard-00-00.hmnszdi.mongodb.net","timestamp":"2025-06-13T19:45:42.480Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2025-06-13T19:45:42.485Z"}
+{"level":"error","message":"User is not logged in.","stack":"Error: User is not logged in.\n    at file:///S:/Lambton/Term-4%20WIL/WIL/oneAuction/backend/utils/asyncHandler.js:6:10\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","statusCode":500,"timestamp":"2025-06-13T19:45:47.855Z"}
+{"level":"info","message":"{\"method\":\"POST\",\"url\":\"/api/user/logout\",\"status\":\"500\",\"responseTime\":5.185}","timestamp":"2025-06-13T19:45:47.860Z"}
+{"level":"info","message":"{\"method\":\"POST\",\"url\":\"/api/user/login\",\"status\":\"200\",\"responseTime\":439.754}","timestamp":"2025-06-13T19:45:55.493Z"}
+{"level":"info","message":"User logged out","timestamp":"2025-06-13T19:45:59.909Z","userId":"684c7d878b07666ed416a79e"}
+{"level":"info","message":"{\"method\":\"POST\",\"url\":\"/api/user/logout\",\"status\":\"200\",\"responseTime\":294.997}","timestamp":"2025-06-13T19:45:59.910Z"}
