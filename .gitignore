@@ -6,6 +6,7 @@
 .env.*       # for things like .env.production or .env.local
 
 # Logs
+app.log
 /app.log
 *.log        # any other log files
 

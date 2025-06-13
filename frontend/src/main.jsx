@@ -11,7 +11,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/login" element={<Login />} />
-        {/* Add other routes like /register or /dashboard as needed */}
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

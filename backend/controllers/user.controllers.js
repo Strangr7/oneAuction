@@ -1,71 +1,62 @@
-// user registration
-
 import User from "../models/users.models.js";
 import UserProfile from "../models/userProfile.models.js";
 import { asyncHandler } from "../utils/asyncHandler.js";
 import { apiError } from "../utils/apiError.js";
 import { APIResponse } from "../utils/apiResponse.js";
-import { generateRandomUsername } from "../utils/userName.utils.js";
+import { generateRandomUsername } from "../utils/randomUsername.js";
+import logger from "../utils/logger.js";
+import { generateAccessToken, generateRefreshToken } from "../utils/token.js";
 
-// POST /api/users/register
+/**
+ * @desc Registers a new user with profile creation
+ * @route POST /api/user/register
+ */
 const registerUser = asyncHandler(async (req, res) => {
   const { firstName, lastName, email, username, password, confirmPassword } =
     req.body;
 
-  // Validate required fields
   if (!firstName || !lastName || !email || !password || !confirmPassword) {
     throw new apiError(400, "All required fields must be provided.");
   }
 
-  // Password match check
   if (password !== confirmPassword) {
-    throw new apiError(400, "passwords do not match");
+    throw new apiError(400, "Passwords do not match.");
   }
 
-  //password complexity check
   const passwordRegex =
     /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
   if (!passwordRegex.test(password)) {
     throw new apiError(
       400,
-      "Password must be at least 8 characters long, contain at least one uppercase letter, one lowercase letter, one number, and one special character."
+      "Password must contain uppercase, lowercase, number, special character and be at least 8 characters long."
     );
   }
 
-  //Genereate radom username if not provided
+  // Generate username if not provided
   const finalUsername =
     username || (await generateRandomUsername(firstName, lastName));
-
-  // Check if email exists
   const existingUser = await User.findOne({
     $or: [{ email }, { username: finalUsername }],
   });
 
   if (existingUser) {
-    throw new apiError(
-      409,
-      existingUser.email === email
-        ? "Email already in use"
-        : "Username already in use"
-    );
+    throw new apiError(409, "Email or username already in use.");
   }
 
-  // Create new user
-  const newUser = new User({
+  const newUser = await User.create({
     email,
     username: finalUsername,
     password,
   });
 
-  await newUser.save();
-
-  // Create user profile with default avatar
   const newProfile = await UserProfile.create({
     firstName,
     lastName,
     user: newUser._id,
     avatarUrl: "https://example.com/default-avatar.png",
   });
+
+  logger.info("New user registered", { userId: newUser._id });
 
   return res.status(201).json(
     new APIResponse(
@@ -79,7 +70,6 @@ const registerUser = asyncHandler(async (req, res) => {
           profile: {
             firstName: newProfile.firstName,
             lastName: newProfile.lastName,
-            phone: newProfile.phone,
             avatarUrl: newProfile.avatarUrl,
           },
         },
@@ -89,46 +79,54 @@ const registerUser = asyncHandler(async (req, res) => {
   );
 });
 
-export { registerUser };
+/**
+ * @desc Logs in a user and returns access and refresh tokens
+ * @route POST /api/user/login
+ */
 
-
-// User login
-// POST /api/user/login
 const loginUser = asyncHandler(async (req, res) => {
-  const { emailOrUsername, password } = req.body;
+  const { identifier, password } = req.body;
 
-  // Validate required fields
-  if (!emailOrUsername || !password) {
-    throw new apiError(400, "Email/Username and password are required.");
+  if (!identifier || !password) {
+    throw new apiError(400, "Identifier and password are required.");
   }
 
-  // Find user by email or username
-  const user = await User.findOne({ $or: [{ email: emailOrUsername }, { username: emailOrUsername }], });
+  // find user by email or username
+  const user = await User.findOne({
+    $or: [{ email: identifier }, { username: identifier }],
+  });
 
-  if (!user) {
+  if (!user || !(await user.comparePassword(password))) {
     throw new apiError(401, "Invalid email/username or password.");
   }
 
-  // Check if account is active
   if (user.status !== "active") {
-    throw new apiError(403, "Account is not active. Please contact support.");
+    throw new apiError(403, "Account is not active.");
   }
 
-  // Compare password
-  const isPasswordValid = await user.comparePassword(password);
-
-  if (!isPasswordValid) {
-    throw new apiError(401, "Invalid email/username or password.");
-  }
-
-  // Fetch user profile
   const profile = await UserProfile.findOne({ user: user._id });
+  if (!profile) {
+    throw new apiError(500, "User profile not found.");
+  }
 
-  // Optional: Update last login timestamp
+  // Generate JWT tokens for authentication
+  // Access token: short-lived, used for API requests
+  // Refresh token: long-lived, used to generate new access tokens
+  const accessToken = generateAccessToken(user._id, user.role);
+  const refreshToken = generateRefreshToken(user._id);
+
+  user.refreshToken = refreshToken;
   user.lastLogin = new Date();
-  await user.save();
+  await user.save({ validateBeforeSave: false });
 
-  // Send success response
+  // Set refresh token as HTTP-only cookie for security
+  res.cookie("refreshToken", refreshToken, {
+    httpOnly: true,
+    secure: process.env.NODE_ENV === "production",
+    sameSite: "Strict",
+    maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
+  });
+
   return res.status(200).json(
     new APIResponse(
       200,
@@ -138,10 +136,11 @@ const loginUser = asyncHandler(async (req, res) => {
           email: user.email,
           username: user.username,
           role: user.role,
+          lastLogin: user.lastLogin,
+          accessToken,
           profile: {
             firstName: profile.firstName,
             lastName: profile.lastName,
-            phone: profile.phone,
             avatarUrl: profile.avatarUrl,
           },
         },
@@ -151,4 +150,4 @@ const loginUser = asyncHandler(async (req, res) => {
   );
 });
 
-export { loginUser };
+export { registerUser, loginUser };
