@@ -8,9 +8,12 @@ const validateForm = (formData) => {
     errors.email = "Invalid email address.";
   }
 
-  if (formData.password.length < 6) {
-    errors.password = "Password must be at least 6 characters.";
-  }
+const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
+if (!passwordRegex.test(formData.password)) {
+  errors.password =
+    "Password must be at least 8 characters long, and include uppercase, lowercase, number, and special character.";
+}
 
   if (formData.password !== formData.confirmPassword) {
     errors.confirmPassword = "Passwords do not match.";

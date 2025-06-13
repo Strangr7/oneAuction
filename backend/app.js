@@ -10,10 +10,11 @@ const app = express();
 
 app.use(
   cors({
-    origin: process.env.CORS_ORIGIN,
-    Credential: true,
+    origin: "http://localhost:5173", // ⬅️ front-end URL
+    credentials: true,
   })
 );
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -38,7 +39,7 @@ app.use(
   })
 );
 
-app.use("/api/user",userRoutes);
+app.use("/user",userRoutes);
 
 app.use(errorHandler);
 export { app };

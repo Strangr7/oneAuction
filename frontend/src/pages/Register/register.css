@@ -8,6 +8,13 @@
   place-content: center;
 }
 
+.register-page h3{
+  
+    font-family: serif;
+    font-weight: 700;
+
+}
+
 .register-form {
   width: 90vw;
   padding: 0.5rem 1rem;
@@ -22,7 +29,12 @@
 }
 
 .form-wrapper {
-  margin: 0rem auto;
+  margin:2rem auto;
+}
+.row-name {
+    display: flex;
+
+    column-gap: 20px;
 }
 
 label {
