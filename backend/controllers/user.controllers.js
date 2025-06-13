@@ -150,4 +150,50 @@ const loginUser = asyncHandler(async (req, res) => {
   );
 });
 
-export { registerUser, loginUser };
+
+/**
+ * @desc Logs out a user by clearing the refresh token cookie
+ * @route POST /api/user/logout
+ */
+const userLogOut = asyncHandler(async (req, res) => {
+  // Check if refresh token exists in cookies
+  const refreshToken = req.cookies.refreshToken;
+
+  if (!refreshToken) {
+    throw new apiError(401, "User is not logged in.");
+  }
+
+  // Optionally: Find user by refreshToken and clear it from DB
+  const user = await User.findOne({ refreshToken });
+
+  if (!user) {
+    // If token exists in cookie but not in DB
+    res.clearCookie("refreshToken", {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === "production",
+      sameSite: "Strict",
+    });
+    throw new apiError(401, "Invalid session. User not found.");
+  }
+
+  // Remove refresh token from DB
+  user.refreshToken = null;
+  await user.save({ validateBeforeSave: false });
+
+  // Clear refresh token cookie
+  res.clearCookie("refreshToken", {
+    httpOnly: true,
+    secure: process.env.NODE_ENV === "production",
+    sameSite: "Strict",
+  });
+
+  logger.info("User logged out", { userId: user._id });
+
+  return res
+    .status(200)
+    .json(new APIResponse(200, null, "User logged out successfully."));
+});
+ 
+
+
+export { registerUser, loginUser, userLogOut };
