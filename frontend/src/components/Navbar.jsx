@@ -1,22 +1,47 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '../style/navbar.css'; 
 
 function Navbar() {
     return (
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Navbar</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+        <nav className="navbar navbar-expand-lg custom-navbar">
+            <div className="container-fluid">
+                <Link className="navbar-brand custom-brand" to="/">
+                    <span className="brand-text">OneAuction</span>
+                </Link>
+                <button 
+                    className="navbar-toggler custom-toggler" 
+                    type="button" 
+                    data-bs-toggle="collapse" 
+                    data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" 
+                    aria-expanded="false" 
+                    aria-label="Toggle navigation"
+                >
+                    <span className="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <Link className="nav-link active" aria-current="page" to="/login">Login</Link>
+                <div className="collapse navbar-collapse" id="navbarNav">
+                    <ul className="navbar-nav ms-auto">
+                        <li className="nav-item">
+                            <Link className="nav-link custom-nav-link" to="/auctions">
+                                Auctions
+                            </Link>
                         </li>
-                        <li class="nav-item">
-                            <Link className="nav-link" to="/signup">Signup</Link>
+                        <li className="nav-item">
+                            <Link className="nav-link custom-nav-link" to="/about">
+                                About
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link custom-nav-link login-btn" to="/login">
+                                Login
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link custom-nav-link register-btn" to="/register">
+                                Register
+                            </Link>
                         </li>
                     </ul>
                 </div>

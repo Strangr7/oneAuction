@@ -126,6 +126,7 @@ const loginUser = asyncHandler(async (req, res) => {
     maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
   });
 
+  logger.info("User logged in", { userId: user._id, username: user.username });
   return res.status(200).json(
     new APIResponse(
       200,
@@ -153,30 +154,19 @@ const loginUser = asyncHandler(async (req, res) => {
  * @desc Logs out a user by clearing the refresh token cookie
  * @route POST /api/user/logout
  */
-const userLogOut = asyncHandler(async (req, res) => {
+const logOutUser = asyncHandler(async (req, res) => {
   // Check if refresh token exists in cookies
-  const refreshToken = req.cookies.refreshToken;
-
-  if (!refreshToken) {
-    throw new apiError(401, "User is not logged in.");
+  const userId = req.user?._id;
+  if (!userId) {
+    throw new apiError(401, "Unauthorized: No user found in request");
   }
-
-  // Optionally: Find user by refreshToken and clear it from DB
-  const user = await User.findOne({ refreshToken });
-
-  if (!user) {
-    // If token exists in cookie but not in DB
-    res.clearCookie("refreshToken", {
-      httpOnly: true,
-      secure: process.env.NODE_ENV === "production",
-      sameSite: "Strict",
-    });
-    throw new apiError(401, "Invalid session. User not found.");
-  }
-
-  // Remove refresh token from DB
-  user.refreshToken = null;
-  await user.save({ validateBeforeSave: false });
+  const user = await User.findByIdAndUpdate(
+    userId,
+    {
+      $unset: { refreshToken: "" },
+    },
+    { new: true }
+  );
 
   // Clear refresh token cookie
   res.clearCookie("refreshToken", {
@@ -185,11 +175,11 @@ const userLogOut = asyncHandler(async (req, res) => {
     sameSite: "Strict",
   });
 
-  logger.info("User logged out", { userId: user._id });
+  logger.info("User logged out", { userId, username: user.username });
 
   return res
     .status(200)
-    .json(new APIResponse(200, null, "User logged out successfully."));
+    .json(new APIResponse(200, {}, "User logged out successfully."));
 });
 
-export { registerUser, loginUser, userLogOut };
+export { registerUser, loginUser, logOutUser };

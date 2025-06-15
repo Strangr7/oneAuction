@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate, Navigate } from 'react-router-dom';
-import Button from '../components/Button.jsx';
+import Button from '../../components/Button.jsx';
 
 const Dashboard = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(true);
@@ -8,15 +8,21 @@ const Dashboard = () => {
 
   useEffect(() => {
     document.title = 'OneAuction - Dashboard';
-    const token = localStorage.getItem('token');
+    
+    const token = localStorage.getItem('accessToken');
+    
+    
     if (!token) {
-      setIsAuthenticated(false); // Redirect if no token
-    }
-    // Optionally, validate token with backend API
+      console.log("No token found, redirecting to login"); 
+      setIsAuthenticated(false); 
+    } 
+
   }, []);
 
   const handleLogout = () => {
-    localStorage.removeItem('token'); // Clear token
+    
+    localStorage.removeItem('accessToken');
+   
     navigate('/login'); // Redirect to login
   };
 

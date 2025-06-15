@@ -1,55 +1,59 @@
-import React, { useState } from "react";
-import FormInput from "../../components/FormInput.jsx";
-import Button from "../../components/Button.jsx";
-import validateForm from "../../utils/validation/validateForm.js";
-import { useEffect } from "react";
-import "./register.css";
-import { registerUser } from "../../services/userService";
+import React, { useState, useEffect } from 'react';
+import { useNavigate, Link } from 'react-router-dom';
+import FormInput from '../../components/FormInput.jsx';
+import Button from '../../components/Button.jsx';
+import validateForm from '../../utils/validateForm.js';
+import { registerUser } from '../../services/userService.js';
+import '../Register/register.css';
 
 const RegistrationForm = () => {
   const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    username:"",
-    password: "",
-    confirmPassword: "",
+    firstName: '',
+    lastName: '',
+    email: '',
+    username: '',
+    password: '',
+    confirmPassword: '',
   });
 
   const [errors, setErrors] = useState({});
-  const [message, setMessage] = useState("");
+  const [message, setMessage] = useState('');
+  const [isLoading, setIsLoading] = useState(false); // Add loading state
+  const navigate = useNavigate(); // For redirect after success
 
   useEffect(() => {
-    document.title = "OneAuction - Register";
+    document.title = 'OneAuction - Register';
   }, []);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+    setErrors({ ...errors, [e.target.name]: '' }); // Clear field-specific error on change
   };
 
-const handleSubmit = async (e) => {
-  e.preventDefault();
-  const validationErrors = validateForm(formData);
-  setErrors(validationErrors);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+    setMessage('');
 
-  if (Object.keys(validationErrors).length === 0) {
-    try {
-      const data = await registerUser(formData); // Call the API function
-      setMessage(
-        <div className="text-success text-center mb-3">
-          {data?.message || "Registration successful!"}
-        </div>
-      );
-    } catch (error) {
-      const msg =
-        error.response?.data?.message || "Registration failed. Please try again.";
-      setMessage(<div className="text-danger text-center mb-3">{msg}</div>);
+    const validationErrors = validateForm(formData);
+    setErrors(validationErrors);
+
+    if (Object.keys(validationErrors).length === 0) {
+      try {
+        const response = await registerUser(formData); // Call the API function
+        setMessage(
+          <div className="text-success text-center mb-3">
+            {response.message || 'Registration successful! Redirecting to login...'}
+          </div>
+        );
+        setTimeout(() => navigate('/login'), 2000); // Redirect to login after 2 seconds
+      } catch (error) {
+        const msg = error.response?.data?.message || 'Registration failed. Please try again.';
+        setMessage(<div className="text-danger text-center mb-3">{msg}</div>);
+      }
     }
-  } else {
-    setMessage("");
-  }
-};
-
+    setIsLoading(false);
+  };
 
   return (
     <section className="register-page">
@@ -59,24 +63,24 @@ const handleSubmit = async (e) => {
         </section>
 
         <div className="form-wrapper">
-         <div className="row-name">
-          <FormInput
-            label="First Name*"
-            id="firstName"
-            name="firstName"
-            value={formData.firstName}
-            onChange={handleChange}
-            error={errors.firstName}
-          />
+          <div className="row-name">
+            <FormInput
+              label="First Name*"
+              id="firstName"
+              name="firstName"
+              value={formData.firstName}
+              onChange={handleChange}
+              error={errors.firstName}
+            />
 
-          <FormInput
-            label="Last Name*"
-            id="lastName"
-            name="lastName"
-            value={formData.lastName}
-            onChange={handleChange}
-            error={errors.lastName}
-          />
+            <FormInput
+              label="Last Name*"
+              id="lastName"
+              name="lastName"
+              value={formData.lastName}
+              onChange={handleChange}
+              error={errors.lastName}
+            />
           </div>
 
           <FormInput
@@ -88,13 +92,13 @@ const handleSubmit = async (e) => {
             onChange={handleChange}
             error={errors.email}
           />
-           <FormInput
-            label="UserName"
+          <FormInput
+            label="Username"
             id="username"
             name="username"
             value={formData.username}
-             onChange={handleChange}
-           
+            onChange={handleChange}
+            error={errors.username}
           />
           <FormInput
             label="Password*"
@@ -119,16 +123,20 @@ const handleSubmit = async (e) => {
           {message}
 
           <div className="register-actions d-flex flex-column justify-content-between align-items-center">
-            <Button type="submit" className="btn btn-info btn-register d-flex align-items-center">
-              Register
+            <Button
+              type="submit"
+              className="btn btn-info btn-register d-flex align-items-center"
+              disabled={isLoading} // Disable button while loading
+            >
+              {isLoading ? 'Registering...' : 'Register'}
             </Button>
           </div>
 
           <p className="text-center text-muted mt-3">
-            Already have an account?{" "}
-            <a href="#" className="text-primary text-decoration-none">
+            Already have an account?{' '}
+            <Link to="/login" className="text-primary text-decoration-none">
               Login
-            </a>
+            </Link>
           </p>
         </div>
       </form>
